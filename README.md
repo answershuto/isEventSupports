@@ -64,7 +64,7 @@ The proposed solution is to extend the `isEventSupports` method on [EventTarget]
 ```javascript
 interface EventTarget {
   // ...
-  boolean isEventSupports(Event event);
+  boolean isEventSupports(DOMString eventType);
 }
 ```
 
