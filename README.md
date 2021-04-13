@@ -114,7 +114,7 @@ const isSupportInput = 'oninput' in div;
 
 
 
-At this time, input will return ture normally, but in fact there will be no input event on the div. Then, we expect div.isEventSupports('input') to return a false.
+At this time, input will return true normally, but in fact there will be no input event on the div. Then, we expect div.isEventSupports('input') to return a false.
 
 ## Feature Detection and Polyfilling
 
