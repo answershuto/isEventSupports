@@ -89,6 +89,32 @@ window.isEventSupports('load');
 
 
 
+## Other Considerations
+
+It should be noted that in the DOM0 standard, developers can use the following methods to detect whether an event can be monitored.
+
+```javascript
+const element = document.createElement('div');
+const isSupportClick = 'onclick' in element;
+```
+
+However, the DOM0 and DOM2 standards do not require one-to-one correspondence. Not every event can be pre-on to check whether it can be monitored. We expect a method directly on EventTarget to detect whether an event is supported on a specific object.
+
+
+
+In addition, some events are bound to unique elements. Take the following input event as an example.
+
+
+
+```javascript
+const div = document.createElement('div');
+const isSupportInput = 'oninput' in div;
+```
+
+
+
+At this time, input will return ture normally, but in fact there will be no input event on the div. Then, we expect div.isEventSupports('input') to return a false.
+
 ## Feature Detection and Polyfilling
 
 To detect support for isEventSupports, something like this could be used:
