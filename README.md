@@ -10,6 +10,7 @@ Last Update: April 12, 2021
 
 * [Motivation](#motivation)
 * [Proposed Solution](#proposed-solution)
+* [Other Considerations](#other-considerations)
 * [Feature Detection and Polyfilling](#feature-detection-and-polyfilling)
 * [Helpful links](helpful-links)
 
